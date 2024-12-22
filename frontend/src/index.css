@@ -1,42 +1,49 @@
-/* src/pages/Register.css */
+/* Global styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #1e1e2f, #28293e);
+  font-family: Arial, sans-serif;
+  background-color: black;
   color: white;
   overflow: hidden;
 }
 
-.register-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-  width: 100vw;
+.container {
   position: relative;
-}
-
-.canvas-container {
-  width: 50%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
+/* Canvas covers the whole background */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Form container is centered and on top of the canvas */
 .form-container {
+  position: relative;
+  z-index: 2;
   width: 30%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.8);
   padding: 30px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
 }
 
+/* Text styles */
 h2 {
   margin-bottom: 20px;
   font-size: 2rem;
@@ -44,6 +51,14 @@ h2 {
   text-shadow: 0px 4px 10px rgba(255, 203, 71, 0.7);
 }
 
+.message {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+/* Form styles */
 form {
   display: flex;
   flex-direction: column;
@@ -52,17 +67,23 @@ form {
 
 input {
   margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 button {
-  padding: 10px 15px;
+  padding: 15px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #ffcb47;
   color: #1e1e2f;
   font-weight: bold;
@@ -76,9 +97,16 @@ button:hover {
   background-color: #dba632;
 }
 
-.message {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #ff6b6b;
-  text-align: center;
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  color: #ffcb47;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }

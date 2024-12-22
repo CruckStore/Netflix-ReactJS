@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "email": "teamreglisse1@gmail.com",
+    "password": "$2a$10$vLrcAjGQdcncvtKM/FfblOWEV2xFwDLBbcNKvIpyLd2wE7O9soDz2"
+  },
+  {
+    "email": "zdqdz@gmail.com",
+    "password": "$2a$10$iyj7k1PzldVwFlArioEvIexT1qHZn7bs6nKJkjXjdtWFI/NOVYS7C"
+  },
+  {
+    "email": "epyidev@gmail.com",
+    "password": "$2a$10$tiZyG29/R0Q4FzDY2fHJVu9/mRELhEaHLX/Lo5VMrGhgOJxMZSiD6"
+  }
+]
